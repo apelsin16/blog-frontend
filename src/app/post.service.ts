@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class PostService {
-  private apiUrl = 'http://localhost:3001/posts'; // API URL
+  private apiUrl = 'https://blog-server.up.railway.app/posts'; // API URL
 
   constructor(private http: HttpClient) {}
 

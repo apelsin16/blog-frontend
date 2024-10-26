@@ -11,9 +11,9 @@ import { AuthComponent } from './auth/auth.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { HttpClientModule } from "@angular/common/http";
-import { JwtHelperService, JwtModule } from "@auth0/angular-jwt";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
 import { QuillModule } from 'ngx-quill';
 import { PostComponent } from './post/post.component';
 import { SortingPipe } from './sorting.pipe';
@@ -31,7 +31,7 @@ export function tokenGetter() {
     AuthComponent,
     DashboardComponent,
     PostComponent,
-    SortingPipe
+    SortingPipe,
   ],
   imports: [
     BrowserModule,
@@ -43,13 +43,13 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        allowedDomains: ['localhost:4200'],  // Вкажіть свій домен
-        disallowedRoutes: [],  // URL, які не повинні містити токен
+        allowedDomains: ['https://blog-frontend-six-red.vercel.app'], // Вкажіть свій домен
+        disallowedRoutes: [], // URL, які не повинні містити токен
       },
     }),
-    QuillModule.forRoot()
+    QuillModule.forRoot(),
   ],
   providers: [JwtHelperService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
