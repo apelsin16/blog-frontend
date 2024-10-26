@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class PostService {
-  private apiUrl = 'https://balanced-consideration.up.railway.app/posts'; // API URL
+  private apiUrl = 'https://blog-server-9f34645fa6c6.herokuapp.com/posts'; // API URL
 
   constructor(private http: HttpClient) {}
 
