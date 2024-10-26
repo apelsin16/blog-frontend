@@ -12,7 +12,7 @@ export class AuthService {
   token!: string | null;
   user!: User | null;
 
-  private apiUrl = 'https://blog-server.up.railway.app/account'; // API URL
+  private apiUrl = 'https://balanced-consideration.up.railway.app/account'; // API URL
 
   constructor(private http: HttpClient, private jwtHelper: JwtHelperService) {}
 
